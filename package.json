@@ -1,0 +1,32 @@
+{
+  "name": "langchain-study-01",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/jaruwat-panturat/langchain-study-01.git",
+  "author": "Jaruwat Panturat",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "@langchain/anthropic": "^0.3.26",
+    "@langchain/core": "^0.3.72",
+    "langchain": "^0.3.31",
+    "node": "^24.6.0",
+    "pg": "^8.11.0"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "yarn build && DB_HOST=localhost node dist/index.js",
+    "dev": "nodemon",
+    "docker:up": "docker-compose up",
+    "docker:down": "docker-compose down",
+    "db:up": "docker-compose up -d postgres",
+    "db:down": "docker-compose down"
+  },
+  "devDependencies": {
+    "@types/node": "^24.3.0",
+    "@types/pg": "^8.10.0",
+    "nodemon": "^3.0.0",
+    "ts-node": "^10.9.0",
+    "typescript": "^5.9.2"
+  }
+}
